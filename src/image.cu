@@ -1,10 +1,16 @@
 #include <stdio.h>
 #include <opencv2/imgcodecs.hpp>
+#include <opencv2/highgui/highgui.hpp>
 #include "../include/saxpy.cu"
 
 int main(void)
 {
-    cv::Mat myImage = cv::imread("lol.png");
+    cv::Mat myImage = cv::imread("../images/dazai.jpeg");
+    cv::imshow("A", myImage);
+    cv::waitKey(5000);
+    
+    
+
     int N = 1<<20;
     float *x, *y, *d_x, *d_y;
     x = (float*)malloc(N*sizeof(float));
