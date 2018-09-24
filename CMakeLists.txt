@@ -9,8 +9,7 @@ include_directories(
 
 cuda_add_executable(image
                     ${headers}
-                    src/image.cu)
+                    src/main.cu)
 
 target_link_libraries(image
-
                     ${OpenCV_LIBS})
